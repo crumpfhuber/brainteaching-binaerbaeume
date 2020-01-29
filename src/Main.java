@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        int [] numbers = {4,6,5,2,1,3,15,19,11,9,13,8};
+        int [] numbers = {2, 4, 6, 15, 9, 8, 19};
         Tree tree = new Tree(7);
 
         for (int i : numbers) tree.insert(i);

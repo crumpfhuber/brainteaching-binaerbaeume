@@ -21,32 +21,22 @@ public class Tree {
     }
 
     private void insert(int key, Tree tree) {
-        if (tree.value > key) {
+        if (tree.value > key)
             if (tree.left == null) tree.left = new Tree(key);
             else insert(key, tree.left);
-
-        } else if (tree.value < key) {
+        else if (tree.value < key)
             if (tree.right == null) tree.right = new Tree(key);
             else insert(key, tree.right);
-
-        }
     }
 
     public void print() {
         print(this);
     }
 
-    /*private void print(Tree tree) {
-        if (tree == null) return;
-        print(tree.left);
-        System.out.print(tree.value + "\t");
-        print(tree.right);
-    }*/
-
     private void print(Tree tree) {
         if (tree == null) return;
         print(tree.left);
-        System.out.print((tree.left == null ? "" : " ) ") + tree.value + (tree.right == null ? "" : " ( "));
+        System.out.print(tree.value + "\t");
         print(tree.right);
     }
 
@@ -79,6 +69,5 @@ public class Tree {
         else ret = true;
         return ret;
     }
-
 
 }
